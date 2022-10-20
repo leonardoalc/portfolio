@@ -1,3 +1,83 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+:root {
+    --cor-back-principal: #171321;
+    --cor-font01: #00ebdf;
 
+    --font-title: "Montserrat", sans-serif;
+    --font-main: "Nunito Sans", sans-serif;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+}
+body {
+    color: white;
+
+    background-color: var(--cor-back-principal);
+
+    font-family: var(--font-main);
+}
+header {
+    display: flex;
+
+    background-color: #1713214f;
+
+    padding: 15px;
+
+    justify-content: end;
+
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+}
+nav {
+    display: flex;
+
+    font-family: var(--font-title);
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2em;
+}
+nav ul{
+    display: flex;
+
+    list-style: none;
+
+    gap: 30px;
+}
+nav a {
+    color: white;
+
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--cor-font01);
+}
+main {
+    margin-top: 65px;
+}
+h1 {
+    font-family: var(--font-title);
+}
+#name-welcome {
+    color: var(--cor-font01);
+}
+#name-welcome::after {
+    content: "|";
+    margin-left: 5px;
+    animation: piscar 1s infinite;
+}
