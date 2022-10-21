@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
-
 @keyframes piscar {
     0%, 100% {
         opacity: 1;
@@ -75,8 +74,13 @@ h1 {
     font-family: var(--font-title);
     font-size: 2.5em;
 }
+#welcome-section {
+    display: flex;
+    position: relative;
+}
 #welcome-text {
-    margin-left: 8%;
+    margin: 75px 0px 150px 8%;
+    max-width: 400px;
 }
 #name-welcome {
     color: var(--cor-font01);
@@ -86,9 +90,22 @@ h1 {
     margin-left: 5px;
     animation: piscar 1s infinite;
 }
+#about-me-text {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+#welcome-image {
+    position: absolute;
+
+    top:  0;
+    left: 50%;
+}
+#welcome-image > img {
+    width: 500px;
+}
 /* !!! Projetos !!! */
 #projects {
-    width: 100vw;
+    width: 100%;
     
     background-color: var(--cor-back-alternative);
 
