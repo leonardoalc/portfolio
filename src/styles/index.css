@@ -12,6 +12,7 @@
 }
 :root {
     --cor-back-principal: #171321;
+    --cor-back-alternative: #0D314A;
     --cor-font01: #00ebdf;
 
     --font-title: "Montserrat", sans-serif;
@@ -68,10 +69,14 @@ nav a:hover {
     color: var(--cor-font01);
 }
 main {
-    margin-top: 65px;
+    padding-top: 65px;
 }
 h1 {
     font-family: var(--font-title);
+    font-size: 2.5em;
+}
+#welcome-text {
+    margin-left: 8%;
 }
 #name-welcome {
     color: var(--cor-font01);
@@ -80,4 +85,37 @@ h1 {
     content: "|";
     margin-left: 5px;
     animation: piscar 1s infinite;
+}
+/* !!! Projetos !!! */
+#projects {
+    width: 100vw;
+    
+    background-color: var(--cor-back-alternative);
+
+    border-top: 1px solid var(--cor-font01);
+    border-bottom: 1px solid var(--cor-font01);
+
+    box-shadow: 0px 0px 8px #00ebdf62;
+}
+#container-projects {
+    display: grid;
+
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    gap: 40px 25px;
+
+    width: 1000px;
+    margin: auto;
+
+    justify-content: center;
+
+    background-color: springgreen;
+}
+.project {
+    background-color: blueviolet;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 30px 30px 0px 0px;
 }
