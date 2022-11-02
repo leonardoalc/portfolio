@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @keyframes piscar {
     0%, 100% {
         opacity: 1;
@@ -12,10 +13,14 @@
 :root {
     --cor-back-principal: #171321;
     --cor-back-alternative: #0D314A;
+    --cor-back-infobox: #D459AB;
     --cor-font01: #00ebdf;
 
-    --font-title: "Montserrat", sans-serif;
+    --font-title: "Montserrat Alternates", sans-serif;
+    --font-title-alternate: "Montserrat", sans-serif;
     --font-main: "Nunito Sans", sans-serif;
+
+    /*A fonte principal para títulos é a alternates, não está invertido*/
 }
 * {
     margin: 0px;
@@ -38,6 +43,8 @@ header {
     padding: 15px;
 
     justify-content: end;
+
+    z-index: 1;
 
     position: fixed;
     overflow: hidden;
@@ -63,6 +70,8 @@ nav a {
     color: white;
 
     text-decoration: none;
+
+    font-family: var(--font-title-alternate);
 }
 nav a:hover {
     color: var(--cor-font01);
@@ -73,6 +82,9 @@ main {
 h1 {
     font-family: var(--font-title);
     font-size: 2.5em;
+}
+h2 {
+    font-family: var(--font-title);
 }
 #welcome-section {
     display: flex;
@@ -99,11 +111,30 @@ h1 {
 #welcome-image {
     position: absolute;
 
-    top:  0;
+    top:  5%;
     left: 55%;
 }
 #welcome-image > img {
-    width: 500px;
+    width: 450px;
+    
+    border-radius: 50%;
+    border: 4px solid var(--cor-back-infobox);
+
+    box-shadow: 0rem 0rem 0.625em 0rem var(--cor-back-infobox);
+
+    transition: box-shadow, border 1.5s;
+}
+#welcome-image > img:hover {
+    box-shadow: 0rem 0rem 0.625em 0rem var(--cor-font01);
+    border: 4px solid var(--cor-font01);
+
+}
+#welcome-image > p {
+    position: absolute;
+    left: 17%;  
+    color: gray;
+    width: 300px;
+    text-align: center;
 }
 /* !!! Projetos !!! */
 #projects {
@@ -115,45 +146,69 @@ h1 {
     border-bottom: 1px solid var(--cor-font01);
 
     box-shadow: 0px 0px 8px #00ebdf62;
+
+    padding-bottom: 65px;
 }
 #container-projects {
     display: grid;
 
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 320px 320px 320px;
     grid-template-rows: 300px 300px 300px;
-    gap: 40px 25px;
+    gap: 85px 115px;
 
-    width: 1000px;
+    max-width: 1200px;
     margin: auto;
 
     justify-content: center;
-
-    background-color: springgreen;
 }
 .project {
-    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: 155px 165px;
+    row-gap: 20px;
 
+    width: 320px;
+    height: 320px;
+}
+#project-text {
+    margin-left: 8%;
+
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+#project-text p {
     width: 300px;
-    height: 300px;
-
-    border-radius: 30px 30px 0px 0px;
-
-    
+    margin-left: 10px;
+}
+.gif-box {
+    width: 320px;   
+    height: 155px;
 }
 .gif {
-    width: 300px;
-    height: 145px;
-
-    border-radius: 30px 30px 0px 0px;
+    width: 320px;
+    height: 155px;
 }
 .info-box {
     display: grid;
     grid-template-columns: 300px;
     grid-template-rows: 115px 30px;
+
+    background-color: var(--cor-back-infobox);
+
+    box-shadow: 0rem 0rem 0.625em 0rem var(--cor-back-infobox);
+
+    padding-bottom: 8px;
+}
+.info-box h2 {
+    font-size: 1.3em;
+
+    width: 280px;
+
+    margin: auto;
 }
 .info-box p {
-    text-indent: 10px;
-
+    width: 280px;
+    margin: auto;
     text-align: justify;
 }
 .tec-box {
@@ -191,4 +246,53 @@ h1 {
     border-radius: 30px;
 
     box-shadow: 0rem 0rem 0.625em 0rem #101518;
+
+    width: 60px;
+
+    text-align: center;
+}
+/* !!! HABILIDADES !!!*/
+#skills-section {
+    width: 100%;
+}
+#skills-text {
+    margin-left: 8%;
+
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+#skills-text > p {
+    width: 300px;
+    margin-left: 10px;
+}
+#skills-container {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 600px;
+
+    max-width: 1200px;
+    margin: auto;
+
+    background-color: #00ebdf;
+}
+#skills-icons{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 200px 200px;
+
+    align-items: center;
+    justify-content: center;
+    background-color: #D459AB;
+}
+.skill-img {
+    width: 100px;
+    height: 100px;
+
+    transition: .4s;
+}
+.skill-img:hover {
+    scale: 1.1;
+}
+#skills-infos{
+    background-color: coral;
 }
