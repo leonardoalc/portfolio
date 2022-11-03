@@ -29,7 +29,7 @@ function skills(id) {
         }
     }
     icon[id].addEventListener("mouseleave", () => {
-        icon[id].style.color = "#171321"
+        icon[id].style.color = "aliceblue"
         title.style.visibility = "hidden"
         about_text.innerHTML = `${skills_details[5]}`
     })
