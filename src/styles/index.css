@@ -10,6 +10,14 @@
         opacity: 0;
     }
 }
+@keyframes girar {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 :root {
     --cor-back-principal: #171321;
     --cor-back-alternative: #0D314A;
@@ -27,6 +35,9 @@
     padding: 0px;
 
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     color: white;
@@ -266,33 +277,285 @@ h2 {
     margin-left: 10px;
 }
 #skills-container {
-    display: grid;
-    grid-template-columns: 600px 600px;
-    grid-template-rows: 600px;
-
     max-width: 1200px;
     margin: auto;
-
-    background-color: #00ebdf;
+}
+#skills-icons-text-container {
+    display: grid;
+    grid-template-columns: 600px 600px;
 }
 #skills-icons{
     display: grid;
     grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 200px 200px;
+    grid-template-rows: 180px 180px;
 
     align-items: center;
     justify-content: center;
-    background-color: #D459AB;
+    
 }
-.skill-img {
+.skills-icon {
+
     width: 100px;
     height: 100px;
 
     transition: .4s;
+
+    background-color: aliceblue;
+    padding: 8px;
+
+    border-radius: 10px;
+
+    color: var(--cor-back-principal);
+
+    font-size: 75px;
+
+    text-align: center;
+
+    padding-top: 11px;
+
+    box-shadow: 1px 2px 11px 0px rgba(0, 0, 0, 0.363);
 }
-.skill-img:hover {
+.skills-icon:hover {
     scale: 1.1;
 }
-#skills-infos{
-    background-color: coral;
+#skills-h2 {
+    visibility: hidden;
+
+    font-family: var(--font-title-alternate);
+    font-size: 2em;
+
+    margin-bottom: 10px;
+}
+#skills-details {
+    width: 400px;
+
+    margin-left: 10px;
+
+    font-size: 1.15em;
+}
+/* !!! Footer !!!*/
+footer {
+    background-color: var(--cor-back-alternative);
+
+    border-top: 1px solid var(--cor-font01);
+
+    box-shadow: 0px 0px 8px #00ebdf62;
+}
+#footer-container {
+    width: 310px;
+
+    margin: auto;
+
+    font-size: 1.1em;
+}
+#footer-container > p > a {
+    color: white;
+    text-decoration: none;
+}
+#footer-container > p > a:hover {
+    text-decoration: underline;
+}
+#footer-container > p > a::after {
+    content: "\1F517";
+    margin-left: 2px;
+}
+#footer-icons-container {
+    width: 155px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 3.5em;
+}
+#footer-icons-container a {
+    color: var(--cor-back-infobox);
+}
+#footer-icons-container a > i:hover {
+    animation: girar 2s infinite linear;
+}
+/*SVSDFSDFSDFSDFSDFSFDSDFSDFDDDDDDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSI´TMS-ROITJSRT´GMSDGPÍJSDMFOPITYJSMDOPTIJDMSFGPOKSMDOPIGSMDRGKOPSDFMGIOPDRJMTGOPDSJGMSDIOPGJDIOPSRGJMSPDKOGMIOPESRASERFASEFAKSEJFOPASEJRFIOPASJFSIOPAGKFPOSDGMDIOPSJGSIOPDGMOPSDMVPUOASDRJGOPISDJGPOSDMGPODFMGUPSDRJGPSDFMGDRNMGIODFMGPOKSDFJGMIOPSDMGPDKJGMIOSDMGPOSZDJGMOPASDGHASPGMASDOKGJASEMGÁSDGJIOPAJGSDJRUIOSRG8Y*/
+@media (max-width: 1220px) {
+    #welcome-image {
+        left: 50%;
+    }
+    /* !!! Projetos !!! */
+    #container-projects {
+        grid-template-columns: 320px 320px;
+        grid-template-rows: 300px 300px 300px 300px 300px;
+    }
+}
+@media (max-width: 1000px) {
+    #welcome-section {
+        display: grid;
+        grid-template-columns: 450px;
+        grid-template-rows: 580px 630px;
+
+        justify-content: center;
+    }
+    #welcome-text {
+        margin: 75px 0px 150px auto;
+        max-width: 400px;
+        
+    }
+    #welcome-image {
+        transform: translate(-50%, 0%);
+
+        top: 580px;
+        left: 50%;
+    }
+    #welcome-image > img {
+        width: 450px;
+    }
+    #welcome-image > p {
+        left: 18%;  
+    }
+    /* !!! HABILIDADES !!!*/
+    #skills-container {
+        max-width: 600px;
+    }
+    #skills-icons-text-container {
+        grid-template-columns: 300px 300px;
+    }
+    #skills-icons{
+        grid-template-columns:  100px 100px 100px;
+        grid-template-rows: 120px 120px;
+    }
+    .skills-icon {
+        width: 75px;
+        height: 75px;
+
+        font-size: 60px;
+
+        padding-top: 9px;
+    }
+    #skills-h2 {
+        font-size: 1.67em;
+    }
+    #skills-details {
+        width: 300px;
+
+        font-size: 1.05em;
+    }
+}
+@media (max-width: 780px) {
+    #project-text {
+        margin: auto;
+
+        width: 320px;
+
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    #project-text p {
+        width: 300px;
+        margin-left: 10px;
+    }
+    #container-projects {
+        grid-template-columns: 320px;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+    }
+}
+@media (max-width: 640px) {
+    header {
+        display: flex;
+
+        padding: 15px;
+    
+        justify-content: center;
+
+        position: inherit;
+    }
+    nav ul{
+        display: block;
+    
+        list-style: none;
+    
+        gap: 30px;
+        
+    }
+    nav li {
+        margin-top: 65px;
+
+        text-align: center;
+
+        font-size: 1.5em;
+    }
+    nav a {
+        color: white;
+    
+        text-decoration: none;
+    
+        font-family: var(--font-title-alternate);
+    }
+    nav a:hover {
+        color: var(--cor-font01);
+    }
+    h1 {
+        font-family: var(--font-title);
+        font-size: 2.02em;
+    }
+    #welcome-section {
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 580px 430px;
+
+        justify-content: center;
+    }
+    #welcome-text {
+        margin: 75px 0px 150px auto;
+        max-width: 300px;
+
+        margin: auto;
+    }
+    #about-me-text {
+        font-size: 1.1em;
+    }
+    #welcome-image {
+        transform: translate(-50%, 0%);
+
+        top: 580px;
+        left: 50%;
+    }
+    #welcome-image > img {
+        width: 300px;
+    }
+    #welcome-image > p {
+        left: 1%;  
+    }
+    /* !!! HABILIDADES !!!*/
+    #skills-container {
+        max-width: 350px;
+    }
+    #skills-icons-text-container {
+        grid-template-columns: 300px;
+        grid-template-rows: 241px 241px;
+        row-gap: 20px;
+
+        justify-content: center;
+    }
+    #skills-icons{
+        grid-template-columns:  100px 100px 100px;
+        grid-template-rows: 120px 120px;
+
+    }
+    .skills-icon {
+        width: 75px;
+        height: 75px;
+
+        font-size: 60px;
+
+        padding-top: 9px;
+
+    }
+    #skills-h2 {
+        font-size: 1.67em;
+    }
+    #skills-details {
+        width: 300px;
+
+        font-size: 1.05em;
+
+        margin: auto;
+    }
 }

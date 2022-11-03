@@ -24,7 +24,7 @@
                 <h1>Olá, me chamo <br><span id="name-welcome"></span></h1>
                 <div id="about-me-text">
                     <p>
-                        Olá, você já dever ter percebido meu nome, tenho 19 anos e atualmente curso Análise e Desenvolvimento de Sistemas na estácio.
+                        Olá, você já deve ter percebido meu nome, tenho 19 anos e atualmente curso Análise e Desenvolvimento de Sistemas na Estácio.
                     </p>
                     <p>
                         Tenho o desejo de me tornar um profissional Fullstack, mas atualmente direcionei meus estudos para o Front-end. Hoje estou estudando React.
@@ -36,7 +36,7 @@
             </div>
             <div id="welcome-image">
                 <img src="src/images/leonardo-draw-otimizado.jpg" alt="Programming">
-                <p>/*Pedi para uma inteligência Artificial me desenhar como um personagem de mangá*/</p>
+                <p>/*Pedi para uma inteligência artificial me desenhar como um personagem de mangá*/</p>
             </div>
         </section>
 <!-------------------------------------------------------------------------------------------------------------->
@@ -253,17 +253,17 @@
                 <p>Habilidades que adquiri estudando até o momento.</p>
             </div>
             <div id="skills-container">
-                <div id="skills-icons-container">
+                <div id="skills-icons-text-container">
                     <div id="skills-icons">
-                        <img src="src/images/github.png" alt="" class="skill-img">
-                        <img src="src/images/github.png" alt="" class="skill-img">
-                        <img src="src/images/github.png" alt="" class="skill-img">
-                        <img src="src/images/github.png" alt="" class="skill-img">
-                        <img src="src/images/github.png" alt="" class="skill-img">
+                        <i class="fa-brands fa-html5 skills-icon" onmouseover="skills(0)"></i>
+                        <i class="fa-brands fa-css3-alt skills-icon" onmouseover="skills(1)"></i>
+                        <i class="fa-brands fa-square-js skills-icon" onmouseover="skills(2)"></i>
+                        <i class="fa-brands fa-python skills-icon" onmouseover="skills(3)"></i>
+                        <i class="fa-brands fa-git-alt skills-icon" onmouseover="skills(4)"></i>
                     </div>
                     <div id="skills-infos">
-                        <h2>Lorem Pai</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum totam iste cum inventore adipisci animi aque quae, saepe sed culpa deleniti ut minima incidunt praesentium repudiandae ipsa error. Natus.</p>  
+                        <h2 id="skills-h2">Habilidades</h2>
+                        <p id="skills-details">/*Passe o mouse ou toque no ícone para ler sobre*/</p>  
                     </div>
                 </div>
             </div>
@@ -284,9 +284,18 @@
         ⣿⣿⠋⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸
     -->
     <footer>
-        Desenvolvido por <a href="https://github.com/leonardoalc">Sandro Leonardo</a>
+        <div id="footer-container">
+            <p>Email: sandroleonardoads@gmail.com</p>
+            <p>Imagem inicial feita pela IA: <a href="https://www.wombo.art" target="_blank">Dream</a></p>
+            <div id="footer-icons-container">
+                <a href="https://www.linkedin.com/in/sandro-alcantara/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/leonardoalc" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            </div>
+        </div>
     </footer>
-    <script src="src/scripts/index.js"></script>
+
     <script src="https://kit.fontawesome.com/e9ee83335e.js" crossorigin="anonymous"></script>
+    <script src="src/scripts/typewriter.js"></script>
+    <script src="src/scripts/skills.js"></script>
 </body>
 </html>
