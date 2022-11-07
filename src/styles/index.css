@@ -176,7 +176,6 @@ h2 {
     display: grid;
     grid-template-columns: 320px;
     grid-template-rows: 155px 165px;
-    row-gap: 20px;
 
     width: 320px;
     height: 320px;
@@ -198,6 +197,9 @@ h2 {
 .gif {
     width: 320px;
     height: 155px;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .info-box {
     display: grid;
@@ -206,9 +208,12 @@ h2 {
 
     background-color: var(--cor-back-infobox);
 
-    box-shadow: 0rem 0rem 0.625em 0rem var(--cor-back-infobox);
+    box-shadow: 0em 2px 0.425em 0rem var(--cor-back-infobox);
 
     padding-bottom: 8px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 .info-box h2 {
     font-size: 1.3em;
@@ -216,6 +221,7 @@ h2 {
     width: 280px;
 
     margin: auto;
+    margin-top: 10px;
 }
 .info-box p {
     width: 280px;
@@ -254,7 +260,7 @@ h2 {
 
     padding: 5px;
 
-    border-radius: 30px;
+    border-radius: 10px;
 
     box-shadow: 0rem 0rem 0.625em 0rem #101518;
 
@@ -279,6 +285,7 @@ h2 {
 #skills-container {
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 65px;
 }
 #skills-icons-text-container {
     display: grid;
@@ -335,6 +342,8 @@ h2 {
 }
 /* !!! Footer !!!*/
 footer {
+    padding-top: 30px;
+
     background-color: var(--cor-back-alternative);
 
     border-top: 1px solid var(--cor-font01);
