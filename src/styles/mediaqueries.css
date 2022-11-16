@@ -1,20 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-:root {
-    --cor-back-principal: #171321;
-    --cor-back-alternative: #0D314A;
-    --cor-back-infobox: #D459AB;
-    --cor-font01: #00ebdf;
-
-    --font-title: "Montserrat Alternates", sans-serif;
-    --font-title-alternate: "Montserrat", sans-serif;
-    --font-main: "Nunito Sans", sans-serif;
-
-    /*A fonte principal para títulos é a alternates, não está invertido*/
-}
-@media (max-width: 1220px) {
+@media screen and (max-width: 1220px) {
     #welcome-image {
         left: 50%;
     }
@@ -24,7 +9,7 @@
         grid-template-rows: 300px 300px 300px 300px 300px;
     }
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     #welcome-section {
         display: grid;
         grid-template-columns: 450px;
@@ -77,7 +62,7 @@
         font-size: 1.05em;
     }
 }
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
     #project-text {
         margin: auto;
 
@@ -95,7 +80,7 @@
         grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px;
     }
 }
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
     header {
         display: flex;
 
