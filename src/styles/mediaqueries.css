@@ -1,8 +1,5 @@
 @charset "UTF-8";
 @media screen and (max-width: 1220px) {
-    #welcome-image {
-        left: 50%;
-    }
     /* !!! Projetos !!! */
     #container-projects {
         grid-template-columns: 320px 320px;
@@ -11,28 +8,36 @@
 }
 @media screen and (max-width: 1000px) {
     #welcome-section {
-        display: grid;
-        grid-template-columns: 450px;
-        grid-template-rows: 580px 630px;
+        grid-template-columns: 250px 250px;
+    
+        width: 500px;
 
-        justify-content: center;
+        align-items: center;
     }
-    #welcome-text {
-        margin: 75px 0px 150px auto;
-        max-width: 400px;
-        
+    #welcome-text h1 {
+        height: 70px;
+    
+        margin-bottom: 20px;
+
+        font-size: 1.77em;
+    }
+    span#name-welcome {
+        color: var(--cor-font01);
+    }
+    #welcome-text p {
+        font-size: 1.1em;
+    
+        margin-bottom: 10px;
     }
     #welcome-image {
-        transform: translate(-50%, 0%);
-
-        top: 580px;
-        left: 50%;
+        text-align: center;
     }
-    #welcome-image > img {
-        width: 450px;
-    }
-    #welcome-image > p {
-        left: 18%;  
+    #welcome-image img {
+        width: 250px;
+    
+        border: 3px solid var(--cor-back-infobox);
+        box-shadow: 0px 0px 10px #D459AB;
+        border-radius: 50%;
     }
     /* !!! HABILIDADES !!!*/
     #skills-container {
@@ -62,7 +67,7 @@
         font-size: 1.05em;
     }
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
     #project-text {
         margin: auto;
 
@@ -120,32 +125,12 @@
         font-size: 2.02em;
     }
     #welcome-section {
-        display: grid;
-        grid-template-columns: 300px;
-        grid-template-rows: 580px 430px;
+        grid-template-columns: 250px;
+    
+        width: 250px;
 
+        align-items: center;
         justify-content: center;
-    }
-    #welcome-text {
-        margin: 75px 0px 150px auto;
-        max-width: 300px;
-
-        margin: auto;
-    }
-    #about-me-text {
-        font-size: 1.1em;
-    }
-    #welcome-image {
-        transform: translate(-50%, 0%);
-
-        top: 580px;
-        left: 50%;
-    }
-    #welcome-image > img {
-        width: 300px;
-    }
-    #welcome-image > p {
-        left: 1%;  
     }
     /* !!! HABILIDADES !!!*/
     #skills-container {
