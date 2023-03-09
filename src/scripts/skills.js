@@ -1,7 +1,7 @@
 function skills(id) {
     const skills_details = [
-            ["HTML 5", "É uma linguagem de marcação utilizada na construção de páginas na Web."],
-            ["CSS 3", "É um mecanismo para adicionar estilo a um documento web."], 
+            ["ReactJS", "É uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web."],
+            ["NodeJS", "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web."], 
             ["JavaScript", "É uma linguagem de programação. Juntamente com HTML e CSS, é uma das três principais tecnologias da web."], 
             ["Python 3", "Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte."],
             ["Git", "É um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software."],
@@ -18,8 +18,8 @@ function skills(id) {
 
     for (let i = 0; i <= 4; i++) {
         const cores = [
-            "#F25012",
-            "#12A0F2",
+            "#61DAFB",
+            "#78AD67",
             "#F2E512",
             "#1D6FA9",
             "#E44D32"
